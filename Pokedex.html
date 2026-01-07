@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Pokedex</title>
+    <style>
+        /*-----Inicio NavBar-----*/
+        body {
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            width: 100%;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 60.1px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        h3 {
+            text-align: left;
+        }
+        a:hover {
+            color: cyan;
+        }
+         /*------Final NavBar------*/
+        .w3-row-padding .w3-third {
+            text-align: center;
+            position: relative;
+        }
+
+        .w3-row-padding img {
+            border-style: solid;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+        }
+        .back:hover {
+            border-color: black;
+          background-color: rgb(99, 100, 99);
+        }
+        
+        .text-overlay {
+            position: absolute;
+            top: 19%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(122, 19, 19, 0.5);
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+        
+        .linkpok:hover{
+            color:blue; width: 100%;
+        }
+        .linkgrama:hover{
+            background-color: green;
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px green,
+            inset 0px 0px 10px 2px;
+
+        }
+        .linkfogo:hover{
+            background-color: orangered;
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px orangered,
+            inset 0px 0px 10px 2px;
+        }
+        .linkagua:hover{
+            background-color: blue;
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px blue,
+            inset 0px 0px 10px 2px;
+        }
+        .linknormal:hover{
+            background-color: gray;
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px gray,
+            inset 0px 0px 10px 2px;
+        }
+        .linkeletico:hover{
+            background-color: yellow;
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px yellow,
+            inset 0px 0px 10px 2px;
+        }
+        .linkinseto:hover{
+            background-color: chartreuse;
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px chartreuse,
+            inset 0px 0px 10px 2px;
+        }
+        .linkvoador:hover{
+            background-color: white;
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px white,
+            inset 0px 0px 10px 2px;
+        }
+        .linkvenenoso:hover{
+            background-color: blueviolet;
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px blueviolet,
+            inset 0px 0px 10px 2px;
+        }
+        .linkterrestre:hover{
+            background-color: rgb(189, 145, 25);
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px rgb(189, 145, 25),
+            inset 0px 0px 10px 2px;
+        }
+        .linkfada:hover{
+            background-color: fuchsia;
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px fuchsia,
+            inset 0px 0px 10px 2px;
+        }
+        .linklutador:hover{
+            background-color: darkred;
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px darkred,
+            inset 0px 0px 10px 2px;
+        }
+        .linkpsiquico:hover{
+            background-color: indianred;
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px indianred,
+            inset 0px 0px 10px 2px;
+        }
+        .linkpedra:hover{
+            background-color: rgb(110, 82, 49);
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px rgb(110, 82, 49),
+            inset 0px 0px 10px 2px;
+        }
+        .linkaco:hover{
+            background-color: darkgrey;
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px darkgray,
+            inset 0px 0px 10px 2px;
+        }
+        .linkgelo:hover{
+            background-color: deepskyblue;
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px deepskyblue,
+            inset 0px 0px 10px 2px;
+        }
+        .linkfantasma:hover{
+            background-color: purple;
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px purple,
+            inset 0px 0px 10px 2px;
+        }
+        .linkdragao:hover{
+            background-color: slategrey;
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px slategrey,
+            inset 0px 0px 10px 2px;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(151, 167, 167);">
+    <nav style="width: 100%; z-index: 9999">
+    <ul style="width: 100%; display: flex; justify-content: center;">
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Projeto.html"><i class="fa fa-home"></i><br>Inicio</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Pokedex.html"><i class="fa fa-list-ol"></i><br>Pokedex</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Anime.html"><i class="fa fa-book"></i><br>Anime</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Filmes.html"><i class="fa fa-image"></i><br>Filmes</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Jogos.html"><i class="fa fa-gamepad"></i><br>Jogos</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Acessorios.html"><i class="fa fa-home"></i><br>Acessorios</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Cartas.html"><i class="fa fa-clone"></i><br>Cartas</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Aplicativos.html"><i class="fa fa-android"></i><br>Aplicativos</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Outros.html"><i class="fa fa-gear"></i><br>Outros</a></li>
+    </ul>
+    </nav>
+    <div class="w3-row-padding">
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Bulbasaur.html">
+                <img src="ImagensPkm/001.png" alt="Bulbasaur" class="back linkgrama">
+                <div class="text-overlay">Bulbasaur</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container ">
+                <a class="linkpok" href="Pokemons/Ivysaur.html">
+                <img src="ImagensPkm/002.png" alt="Ivysaur" class="back linkgrama">
+                <div class="text-overlay">Ivysaur</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Venusaur.html">
+                <img src="ImagensPkm/003.png" alt="Venusaur" class="back linkgrama">
+                <div class="text-overlay">Venusaur</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Charmander.html">
+                <img src="ImagensPkm/004.png" alt="Charmander" class="back linkfogo">
+                <div class="text-overlay">Charmander</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Charmeleon.html">
+                <img src="ImagensPkm/005.png" alt="Charmeleon" class="back linkfogo">
+                <div class="text-overlay">Charmeleon</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Charizard.html">
+                <img src="ImagensPkm/006.png" alt="Charizard" class="back linkfogo">
+                <div class="text-overlay">Charizard</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Squirtle.html">
+                <img src="ImagensPkm/007.png" alt="Squirtle" class="back linkagua">
+                <div class="text-overlay">Squirtle</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Wartortle.html">
+                <img src="ImagensPkm/008.png" alt="Wartortle" class="back linkagua">
+                <div class="text-overlay">Wartortle</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Blastoise.html">
+                <img src="ImagensPkm/009.png" alt="Blastoise" class="back linkagua">
+                <div class="text-overlay">Blastoise</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Caterpie.html">
+                <img src="ImagensPkm/010.png" alt="Caterpie" class="back linkinseto">
+                <div class="text-overlay">Caterpie</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Metapod.html">
+                <img src="ImagensPkm/011.png" alt="Metapod" class="back linkinseto">
+                <div class="text-overlay">Metapod</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Butterfree.html">
+                <img src="ImagensPkm/012.png" alt="Butterfree" class="back linkinseto">
+                <div class="text-overlay">Butterfree</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Weedle.html">
+                <img src="ImagensPkm/013.png" alt="Weedle" class="back linkinseto">
+                <div class="text-overlay">Weedle</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Kakuna.html">
+                <img src="ImagensPkm/014.png" alt="Kakuna" class="back linkinseto">
+                <div class="text-overlay">Kakuna</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Beedrill.html">
+                <img src="ImagensPkm/015.png" alt="Beedrill" class="back linkinseto">
+                <div class="text-overlay">Beedrill</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Pidgey.html">
+                <img src="ImagensPkm/016.png" alt="Pidgey" class="back linkvoador">
+                <div class="text-overlay">Pidgey</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Pidgeotto.html">
+                <img src="ImagensPkm/017.png" alt="Pidgeotto" class="back linkvoador">
+                <div class="text-overlay">Pidgeotto</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Pidgeot.html">
+                <img src="ImagensPkm/018.png" alt="Pidgeot" class="back linkvoador">
+                <div class="text-overlay">Pidgeot</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Rattata.html">
+                <img src="ImagensPkm/019.png" alt="Rattata" class="back linknormal">
+                <div class="text-overlay">Rattata</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Raticate.html">
+                <img src="ImagensPkm/020.png" alt="Raticate" class="back linknormal">
+                <div class="text-overlay">Raticate</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Spearow.html">
+                <img src="ImagensPkm/021.png" alt="Spearow" class="back linkvoador">
+                <div class="text-overlay">Spearow</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Fearow.html">
+                <img src="ImagensPkm/022.png" alt="Fearow" class="back linkvoador">
+                <div class="text-overlay">Fearow</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Ekans.html">
+                <img src="ImagensPkm/023.png" alt="Ekans" class="back linkvenenoso">
+                <div class="text-overlay">Ekans</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Arbok.html">
+                <img src="ImagensPkm/024.png" alt="Arbok" class="back linkvenenoso">
+                <div class="text-overlay">Arbok</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Pikachu.html">
+                <img src="ImagensPkm/025.png" alt="Pikachu" class="back linkeletico">
+                <div class="text-overlay">Pikachu</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Raichu.html">
+                <img src="ImagensPkm/026.png" alt="Raichu" class="back linkeletico">
+                <div class="text-overlay">Raichu</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Sandshrew.html">
+                <img src="ImagensPkm/027.png" alt="Sandshrew" class="back linkterrestre">
+                <div class="text-overlay">Sandshrew</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Sandslash.html">
+                <img src="ImagensPkm/028.png" alt="Sandslash" class="back linkterrestre">
+                <div class="text-overlay">Sandslash</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/NidoranF.html">
+                <img src="ImagensPkm/029.png" alt="NidoranF" class="back linkvenenoso">
+                <div class="text-overlay">Nidoran</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Nidorina.html">
+                <img src="ImagensPkm/030.png" alt="Nidorina" class="back linkvenenoso">
+                <div class="text-overlay">Nidorina</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Nidoqueen.html">
+                <img src="ImagensPkm/031.png" alt="Nidoqueen" class="back linkvenenoso">
+                <div class="text-overlay">Nidoqueen</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/NidoranM.html">
+                <img src="ImagensPkm/032.png" alt="NidoranM" class="back linkvenenoso">
+                <div class="text-overlay">Nidoran</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Nidorino.html">
+                <img src="ImagensPkm/033.png" alt="Nidorino" class="back linkvenenoso">
+                <div class="text-overlay">Nidorino</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Nidoking.html">
+                <img src="ImagensPkm/034.png" alt="Nidoking" class="back linkvenenoso">
+                <div class="text-overlay">Nidoking</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Clefairy.html">
+                <img src="ImagensPkm/035.png" alt="Clefairy" class="back linkfada">
+                <div class="text-overlay">Clefairy</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Clefable.html">
+                <img src="ImagensPkm/036.png" alt="Clefable" class="back linkfada">
+                <div class="text-overlay">Clefable</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Vulpix.html">
+                <img src="ImagensPkm/037.png" alt="Vulpix" class="back linkfogo">
+                <div class="text-overlay">Vulpix</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Ninetales.html">
+                <img src="ImagensPkm/038.png" alt="Ninetales" class="back linkfogo">
+                <div class="text-overlay">Ninetales</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Jigglypuff.html">
+                <img src="ImagensPkm/039.png" alt="Jigglypuff" class="back linkfada">
+                <div class="text-overlay">Jigglypuff</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Wigglytuff.html">
+                <img src="ImagensPkm/040.png" alt="Wigglytuff" class="back linkfada">
+                <div class="text-overlay">Wigglytuff</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Zubat.html">
+                <img src="ImagensPkm/041.png" alt="Zubat" class="back linkvenenoso">
+                <div class="text-overlay">Zubat</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Golbat.html">
+                <img src="ImagensPkm/042.png" alt="Golbat" class="back linkvenenoso">
+                <div class="text-overlay">Golbat</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Oddish.html">
+                <img src="ImagensPkm/043.png" alt="Oddish" class="back linkgrama">
+                <div class="text-overlay">Oddish</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Gloom.html">
+                <img src="ImagensPkm/044.png" alt="Gloom" class="back linkgrama">
+                <div class="text-overlay">Gloom</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Vileplume.html">
+                <img src="ImagensPkm/045.png" alt="Vileplume" class="back linkgrama">
+                <div class="text-overlay">Vileplume</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Paras.html">
+                <img src="ImagensPkm/046.png" alt="Paras" class="back linkinseto">
+                <div class="text-overlay">Paras</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Parasect.html">
+                <img src="ImagensPkm/047.png" alt="Parasect" class="back linkinseto">
+                <div class="text-overlay">Parasect</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Venonat.html">
+                <img src="ImagensPkm/048.png" alt="Venonat" class="back linkinseto">
+                <div class="text-overlay">Venonat</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Venomoth.html">
+                <img src="ImagensPkm/049.png" alt="Venomoth" class="back linkinseto">
+                <div class="text-overlay">Venomoth</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Diglett.html">
+                <img src="ImagensPkm/050.png" alt="Diglett" class="back linkterrestre">
+                <div class="text-overlay">Diglett</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Dugtrio.html">
+                <img src="ImagensPkm/051.png" alt="Dugtrio" class="back linkterrestre">
+                <div class="text-overlay">Dugtrio</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Meowth.html">
+                <img src="ImagensPkm/052.png" alt="Meowth" class="back linknormal">
+                <div class="text-overlay">Meowth</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Persian.html">
+                <img src="ImagensPkm/053.png" alt="Persian" class="back linknormal">
+                <div class="text-overlay">Persian</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Psyduck.html">
+                <img src="ImagensPkm/054.png" alt="Psyduck" class="back linkagua">
+                <div class="text-overlay">Psyduck</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Golduck.html">
+                <img src="ImagensPkm/055.png" alt="Golduck" class="back linkagua">
+                <div class="text-overlay">Golduck</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Mankey.html">
+                <img src="ImagensPkm/056.png" alt="Mankey" class="back linklutador">
+                <div class="text-overlay">Mankey</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Primeape.html">
+                <img src="ImagensPkm/057.png" alt="Primeape" class="back linklutador">
+                <div class="text-overlay">Primeape</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Growlithe.html">
+                <img src="ImagensPkm/058.png" alt="Growlithe" class="back linkfogo">
+                <div class="text-overlay">Growlithe</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Arcanine.html">
+                <img src="ImagensPkm/059.png" alt="Arcanine" class="back linkfogo">
+                <div class="text-overlay">Arcanine</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Poliwag.html">
+                <img src="ImagensPkm/060.png" alt="Poliwag" class="back linkagua">
+                <div class="text-overlay">Poliwag</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Poliwhril.html">
+                <img src="ImagensPkm/061.png" alt="Poliwhril" class="back linkagua">
+                <div class="text-overlay">Poliwhril</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Poliwrath.html">
+                <img src="ImagensPkm/062.png" alt="Poliwrath" class="back linkagua">
+                <div class="text-overlay">Poliwrath</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Abra.html">
+                <img src="ImagensPkm/063.png" alt="Abra" class="back linkpsiquico">
+                <div class="text-overlay">Abra</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Kadabra.html">
+                <img src="ImagensPkm/064.png" alt="Kadabra" class="back linkpsiquico">
+                <div class="text-overlay">Kadabra</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Alakazam.html">
+                <img src="ImagensPkm/065.png" alt="Alakazam" class="back linkpsiquico">
+                <div class="text-overlay">Alakazam</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Machop.html">
+                <img src="ImagensPkm/066.png" alt="Machop" class="back linklutador">
+                <div class="text-overlay">Machop</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Machoke.html">
+                <img src="ImagensPkm/067.png" alt="Machoke" class="back linklutador">
+                <div class="text-overlay">Machoke</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Machamp.html">
+                <img src="ImagensPkm/068.png" alt="Machamp" class="back linklutador">
+                <div class="text-overlay">Machamp</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Bellsprout.html">
+                <img src="ImagensPkm/069.png" alt="Bellsprout" class="back linkgrama">
+                <div class="text-overlay">Bellsprout</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Weepinbell.html">
+                <img src="ImagensPkm/070.png" alt="Weepinbell" class="back linkgrama">
+                <div class="text-overlay">Weepinbell</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Victreebel.html">
+                <img src="ImagensPkm/071.png" alt="Victreebel" class="back linkgrama">
+                <div class="text-overlay">Victreebel</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Tentacool.html">
+                <img src="ImagensPkm/072.png" alt="Tentacool" class="back linkagua">
+                <div class="text-overlay">Tentacool</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Tentacruel.html">
+                <img src="ImagensPkm/073.png" alt="Tentacruel" class="back linkagua">
+                <div class="text-overlay">Tentacruel</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Geodude.html">
+                <img src="ImagensPkm/074.png" alt="Geodude" class="back linkpedra">
+                <div class="text-overlay">Geodude</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Graveler.html">
+                <img src="ImagensPkm/075.png" alt="Graveler" class="back linkpedra">
+                <div class="text-overlay">Graveler</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Golem.html">
+                <img src="ImagensPkm/076.png" alt="Golem" class="back linkpedra">
+                <div class="text-overlay">Golem</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Ponyta.html">
+                <img src="ImagensPkm/077.png" alt="Ponyta" class="back linkfogo">
+                <div class="text-overlay">Ponyta</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Rapidash.html">
+                <img src="ImagensPkm/078.png" alt="Rapidash" class="back linkfogo">
+                <div class="text-overlay">Rapidash</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Slowpoke.html">
+                <img src="ImagensPkm/079.png" alt="Slowpoke" class="back linkagua">
+                <div class="text-overlay">Slowpoke</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Slowbro.html">
+                <img src="ImagensPkm/080.png" alt="Slowbro" class="back linkagua">
+                <div class="text-overlay">Slowbro</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Magnemite.html">
+                <img src="ImagensPkm/081.png" alt="Magnemite" class="back linkaco">
+                <div class="text-overlay">Magnemite</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Magneton.html">
+                <img src="ImagensPkm/082.png" alt="Magneton" class="back linkaco">
+                <div class="text-overlay">Magneton</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Farfetch'd.html">
+                <img src="ImagensPkm/083.png" alt="Farfetch" class="back linkvoador">
+                <div class="text-overlay">Farfetch'd</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Doduo.html">
+                <img src="ImagensPkm/084.png" alt="Doduo" class="back linknormal">
+                <div class="text-overlay">Doduo</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Dodrio.html">
+                <img src="ImagensPkm/085.png" alt="Dodrio" class="back linknormal">
+                <div class="text-overlay">Dodrio</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Seel.html">
+                <img src="ImagensPkm/086.png" alt="Seel" class="back linkagua">
+                <div class="text-overlay">Seel</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Dewgong.html">
+                <img src="ImagensPkm/087.png" alt="Dewgong" class="back linkagua">
+                <div class="text-overlay">Dewgong</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Grimer.html">
+                <img src="ImagensPkm/088.png" alt="Grimer" class="back linkvenenoso">
+                <div class="text-overlay">Grimer</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Muk.html">
+                <img src="ImagensPkm/089.png" alt="Muk" class="back linkvenenoso">
+                <div class="text-overlay">Muk</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Shellder.html">
+                <img src="ImagensPkm/090.png" alt="Shellder" class="back linkagua">
+                <div class="text-overlay">Shellder</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Cloyster.html">
+                <img src="ImagensPkm/091.png" alt="Cloyster" class="back linkagua">
+                <div class="text-overlay">Cloyster</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Gastly.html">
+                <img src="ImagensPkm/092.png" alt="Gastly" class="back linkfantasma">
+                <div class="text-overlay">Gastly</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Haunter.html">
+                <img src="ImagensPkm/093.png" alt="Haunter" class="back linkfantasma">
+                <div class="text-overlay">Haunter</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Gengar.html">
+                <img src="ImagensPkm/094.png" alt="Gengar" class="back linkfantasma">
+                <div class="text-overlay">Gengar</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Onix.html">
+                <img src="ImagensPkm/095.png" alt="Onix" class="back linkpedra">
+                <div class="text-overlay">Onix</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Drowzee.html">
+                <img src="ImagensPkm/096.png" alt="Drowzee" class="back linkpsiquico">
+                <div class="text-overlay">Drowzee</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Hypno.html">
+                <img src="ImagensPkm/097.png" alt="Hypno" class="back linkpsiquico">
+                <div class="text-overlay">Hypno</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Krabby.html">
+                <img src="ImagensPkm/098.png" alt="Krabby" class="back linkagua">
+                <div class="text-overlay">Krabby</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Kingler.html">
+                <img src="ImagensPkm/099.png" alt="Kingler" class="back linkagua">
+                <div class="text-overlay">Kingler</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Voltorb.html">
+                <img src="ImagensPkm/100.png" alt="Voltorb" class="back linkeletico">
+                <div class="text-overlay">Voltorb</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Electrode.html">
+                <img src="ImagensPkm/101.png" alt="Electrode" class="back linkeletico">
+                <div class="text-overlay">Electrode</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Exeggcute.html">
+                <img src="ImagensPkm/102.png" alt="Exeggcute" class="back linkgrama">
+                <div class="text-overlay">Exeggcute</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Exeggutor.html">
+                <img src="ImagensPkm/103.png" alt="Exeggutor" class="back linkgrama">
+                <div class="text-overlay">Exeggutor</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Cubone.html">
+                <img src="ImagensPkm/104.png" alt="Cubone" class="back linkterrestre">
+                <div class="text-overlay">Cubone</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Marowak.html">
+                <img src="ImagensPkm/105.png" alt="Marowak" class="back linkterrestre">
+                <div class="text-overlay">Marowak</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Hitmonlee.html">
+                <img src="ImagensPkm/106.png" alt="Hitmonlee" class="back linklutador">
+                <div class="text-overlay">Hitmonlee</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Hitmonchan.html">
+                <img src="ImagensPkm/107.png" alt="Hitmonchan" class="back linklutador">
+                <div class="text-overlay">Hitmonchan</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Lickitung.html">
+                <img src="ImagensPkm/108.png" alt="Lickitung" class="back linknormal">
+                <div class="text-overlay">Lickitung</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Koffing.html">
+                <img src="ImagensPkm/109.png" alt="Koffing" class="back linkvenenoso">
+                <div class="text-overlay">Koffing</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Weezing.html">
+                <img src="ImagensPkm/110.png" alt="Weezing" class="back linkvenenoso">
+                <div class="text-overlay">Weezing</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Rhyhorn.html">
+                <img src="ImagensPkm/111.png" alt="Rhyhorn" class="back linkterrestre">
+                <div class="text-overlay">Rhyhorn</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Rhydon.html">
+                <img src="ImagensPkm/112.png" alt="Rhydon" class="back linkterrestre">
+                <div class="text-overlay">Rhydon</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Chansey.html">
+                <img src="ImagensPkm/113.png" alt="Chansey" class="back linknormal">
+                <div class="text-overlay">Chansey</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Tangela.html">
+                <img src="ImagensPkm/114.png" alt="Tangela" class="back linkgrama">
+                <div class="text-overlay">Tangela</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Kangaskhan.html">
+                <img src="ImagensPkm/115.png" alt="Kangaskhan" class="back linknormal">
+                <div class="text-overlay">Kangaskhan</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Horsea.html">
+                <img src="ImagensPkm/116.png" alt="Horsea" class="back linkagua">
+                <div class="text-overlay">Horsea</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Seadra.html">
+                <img src="ImagensPkm/117.png" alt="Seadra" class="back linkagua">
+                <div class="text-overlay">Seadra</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Goldeen.html">
+                <img src="ImagensPkm/118.png" alt="Goldeen" class="back linkagua">
+                <div class="text-overlay">Goldeen</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Seaking.html">
+                <img src="ImagensPkm/119.png" alt="Seaking" class="back linkagua">
+                <div class="text-overlay">Seaking</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Staryu.html">
+                <img src="ImagensPkm/120.png" alt="Staryu" class="back linkagua">
+                <div class="text-overlay">Staryu</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Starmie.html">
+                <img src="ImagensPkm/121.png" alt="Starmie" class="back linkagua">
+                <div class="text-overlay">Starmie</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Mr.Mime.html">
+                <img src="ImagensPkm/122.png" alt="Mr.Mime" class="back linkpsiquico">
+                <div class="text-overlay">Mr.Mime</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Scyther.html">
+                <img src="ImagensPkm/123.png" alt="Scyther" class="back linkinseto">
+                <div class="text-overlay">Scyther</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Jxny.html">
+                <img src="ImagensPkm/124.png" alt="Jxny" class="back linkgelo">
+                <div class="text-overlay">Jxny</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Electabuzz.html">
+                <img src="ImagensPkm/125.png" alt="Electabuzz" class="back linkeletico">
+                <div class="text-overlay">Electabuzz</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Magmar.html">
+                <img src="ImagensPkm/126.png" alt="Magmar" class="back linkfogo">
+                <div class="text-overlay">Magmar</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Pinsir.html">
+                <img src="ImagensPkm/127.png" alt="Pinsir" class="back linkinseto">
+                <div class="text-overlay">Pinsir</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Tauros.html">
+                <img src="ImagensPkm/128.png" alt="Tauros" class="back linknormal">
+                <div class="text-overlay">Tauros</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Magikarp.html">
+                <img src="ImagensPkm/129.png" alt="Magikarp" class="back linkagua">
+                <div class="text-overlay">Magikarp</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Gyarados.html">
+                <img src="ImagensPkm/130.png" alt="Gyarados" class="back linkagua">
+                <div class="text-overlay">Gyarados</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Lapras.html">
+                <img src="ImagensPkm/131.png" alt="Lapras" class="back linkagua">
+                <div class="text-overlay">Lapras</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Ditto.html">
+                <img src="ImagensPkm/132.png" alt="Ditto" class="back linknormal">
+                <div class="text-overlay">Ditto</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Eevee.html">
+                <img src="ImagensPkm/133.png" alt="Eevee" class="back linknormal">
+                <div class="text-overlay">Eevee</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Vaporeon.html">
+                <img src="ImagensPkm/134.png" alt="Vaporeon" class="back linkagua">
+                <div class="text-overlay">Vaporeon</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Jolteon.html">
+                <img src="ImagensPkm/135.png" alt="Jolteon" class="back linkeletico">
+                <div class="text-overlay">Jolteon</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Flareon.html">
+                <img src="ImagensPkm/136.png" alt="Flareon" class="back linkfogo">
+                <div class="text-overlay">Flareon</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Porygon.html">
+                <img src="ImagensPkm/137.png" alt="Porygon" class="back linknormal">
+                <div class="text-overlay">Porygon</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Omanyte.html">
+                <img src="ImagensPkm/138.png" alt="Omanyte" class="back linkpedra">
+                <div class="text-overlay">Omanyte</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Omastar.html">
+                <img src="ImagensPkm/139.png" alt="Omastar" class="back linkpedra">
+                <div class="text-overlay">Omastar</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Kabuto.html">
+                <img src="ImagensPkm/140.png" alt="Kabuto" class="back linkpedra">
+                <div class="text-overlay">Kabuto</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Kabutops.html">
+                <img src="ImagensPkm/141.png" alt="Kabutops" class="back linkpedra">
+                <div class="text-overlay">Kabutops</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Aerodactyl.html">
+                <img src="ImagensPkm/142.png" alt="Aerodactyl" class="back linkpedra">
+                <div class="text-overlay">Aerodactyl</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Snorlax.html">
+                <img src="ImagensPkm/143.png" alt="Snorlax" class="back linknormal">
+                <div class="text-overlay">Snorlax</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Articuno.html">
+                <img src="ImagensPkm/144.png" alt="Articuno" class="back linkgelo">
+                <div class="text-overlay">Articuno</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Zapdos.html">
+                <img src="ImagensPkm/145.png" alt="Zapdos" class="back linkeletico">
+                <div class="text-overlay">Zapdos</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Moltres.html">
+                <img src="ImagensPkm/146.png" alt="Moltres" class="back linkfogo">
+                <div class="text-overlay">Moltres</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Dratini.html">
+                <img src="ImagensPkm/147.png" alt="Dratini" class="back linkdragao">
+                <div class="text-overlay">Dratini</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Dragonair.html">
+                <img src="ImagensPkm/148.png" alt="Dragonair" class="back linkdragao">
+                <div class="text-overlay">Dragonair</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Dragonite.html">
+                <img src="ImagensPkm/149.png" alt="Dragonite" class="back linkdragao">
+                <div class="text-overlay">Dragonite</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Mewtwo.html">
+                <img src="ImagensPkm/150.png" alt="Mewtwo" class="back linkpsiquico">
+                <div class="text-overlay">Mewtwo</div>
+                </a>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-container">
+                <a class="linkpok" href="Pokemons/Mew.html">
+                <img src="ImagensPkm/151.png" alt="Mew" class="back linkpsiquico">
+                <div class="text-overlay">Mew</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

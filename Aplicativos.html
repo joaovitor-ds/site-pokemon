@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Aplicativos</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: white
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      width: 100%;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 60px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    h3 {
+      text-align: left;
+    }
+
+    a:hover {
+      background-color: black;
+      color: cyan;
+    }
+
+    .w3-row-padding .w3-half {
+      text-align: center;
+      position: relative;
+    }
+
+    .w3-row-padding img {
+      border-style: dotted dashed solid double;
+      margin: 20px;
+    }
+
+    .text-overlay {
+      position: absolute;
+      top: 12%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(122, 19, 19, 0.5);
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid white;
+      border-radius: 5px;
+    }
+    .text-overlay:hover{
+            background-color: rgb(114, 114, 245);
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px purple,
+            inset 0px 0px 10px 2px;
+            color: black;
+        }
+  </style>
+</head>
+
+<body>
+  <nav style="width: 100%; z-index: 9999">
+    <ul style="width: 100%; display: flex; justify-content: center;">
+    <li><a class="w3-opacity w3-hover-opacity-off" href="Projeto.html"><i class="fa fa-home"></i><br>Inicio</a></li>
+    <li><a class="w3-opacity w3-hover-opacity-off" href="Pokedex.html"><i class="fa fa-list-ol"></i><br>Pokedex</a></li>
+    <li><a class="w3-opacity w3-hover-opacity-off" href="Anime.html"><i class="fa fa-book"></i><br>Anime</a></li>
+    <li><a class="w3-opacity w3-hover-opacity-off" href="Filmes.html"><i class="fa fa-image"></i><br>Filmes</a></li>
+    <li><a class="w3-opacity w3-hover-opacity-off" href="Jogos.html"><i class="fa fa-gamepad"></i><br>Jogos</a></li>
+    <li><a class="w3-opacity w3-hover-opacity-off" href="Acessorios.html"><i class="fa fa-home"></i><br>Acessorios</a></li>
+    <li><a class="w3-opacity w3-hover-opacity-off" href="Cartas.html"><i class="fa fa-clone"></i><br>Cartas</a></li>
+    <li><a class="w3-opacity w3-hover-opacity-off" href="Aplicativos.html"><i class="fa fa-android"></i><br>Aplicativos</a></li>
+    <li><a class="w3-opacity w3-hover-opacity-off" href="Outros.html"><i class="fa fa-gear"></i><br>Outros</a></li>
+  </ul>
+  </nav>
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <div class="w3-container">
+        <img style="width: 40%;" src="ImgAplicativosPkm/Pokemon Quest.jpg" alt="Pokemon Quest">
+        <div class="text-overlay">Pokemon Quest</div>
+      </div>
+    </div>
+    <div class="w3-half">
+      <div class="w3-container">
+        <img style="width: 40%;" src="ImgAplicativosPkm/Pokemon Go.jpg" alt="Pokemon Go">
+        <div class="text-overlay">Pokemon Go</div>
+      </div>
+    </div>
+    <div class="w3-half">
+      <div class="w3-container">
+        <img style="width: 40%;" src="ImgAplicativosPkm/Pokemon Tcg Live.jpg" alt="Pokemon Tcg Live">
+        <div class="text-overlay">Pokemon Tcg Live</div>
+      </div>
+    </div>
+    <div class="w3-half">
+      <div class="w3-container">
+        <img style="width: 40%;" src="ImgAplicativosPkm/Pokemon Home.jpg" alt="Pokemon Home">
+        <div class="text-overlay">Pokemon Home</div>
+      </div>
+    </div>
+    <div class="w3-half">
+      <div class="w3-container">
+        <img style="width: 40%;" src="ImgAplicativosPkm/Pokemon Tv.jpg" alt="Pokemon Tv">
+        <div class="text-overlay">Pokemon Tv</div>
+      </div>
+    </div>
+    <div class="w3-half">
+      <div class="w3-container">
+        <img style="width: 40%;" src="ImgAplicativosPkm/Pokemon Shuffle.jpg" alt="Pokemon Shuffle">
+        <div class="text-overlay">Pokemon Shuffle</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Jogos</title>
+    <style>
+        body {
+          margin: 0;
+          background-color: rgb(255, 116, 116)
+        }
+    
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+          width: 100%;
+        }
+    
+        li {
+          float: left;
+        }
+    
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 60px;
+          text-decoration: none;
+        }
+    
+        li a:hover:not(.active) {
+          background-color: #111;
+        }
+    
+        h3 {
+          text-align: left;
+        }
+        a:hover {
+          background-color: black;
+          color: cyan;
+        }
+        .tamanho {
+            position: relative;
+            width: 45%;
+            margin: 0 auto; /* Adicionado margem para espaçamento */
+            text-align: center;
+        }
+
+        .tamanho img {
+            width: 50%;
+            height: auto;
+            border: 1px solid white;
+            margin: 10px;
+            border: dashed;
+        }
+        .overlay {
+            position: absolute;
+            top: 9%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(38, 0, 255, 0.7);
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid white;
+            border-radius: 5px;
+            width: 40%;
+        }
+        .overlay:hover{
+            background-color:rgba(255, 0, 0, 0.7);
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px rgb(0, 0, 0),
+            inset 0px 0px 10px 2px;
+            color: black;
+        }
+      </style>
+</head>
+<body>
+  <nav style="width: 100%; z-index: 9999">
+    <ul style="width: 100%; display: flex; justify-content: center;">
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Projeto.html"><i class="fa fa-home"></i><br>Inicio</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Pokedex.html"><i class="fa fa-list-ol"></i><br>Pokedex</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Anime.html"><i class="fa fa-book"></i><br>Anime</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Filmes.html"><i class="fa fa-image"></i><br>Filmes</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Jogos.html"><i class="fa fa-gamepad"></i><br>Jogos</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Acessorios.html"><i class="fa fa-home"></i><br>Acessorios</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Cartas.html"><i class="fa fa-clone"></i><br>Cartas</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Aplicativos.html"><i class="fa fa-android"></i><br>Aplicativos</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Outros.html"><i class="fa fa-gear"></i><br>Outros</a></li>
+      </ul>
+    </nav>
+      <div class="w3-row-padding">
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pocket Monsters Red.jpg" alt="Pocket Monsters Red">
+            <div class="overlay">Pocket Monsters Red</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pocket Monsters Green.jpg" alt="Pocket Monsters Green">
+            <div class="overlay">Pocket Monsters Green</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pocket Monsters Blue.jpg" alt="Pocket Monsters Blue">
+            <div class="overlay">Pocket Monsters Blue</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Red.jpg" alt="Pokemon Red">
+            <div class="overlay">Pokemon Red</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Blue.jpg" alt="Pokemon Blue">
+            <div class="overlay">Pokemon Blue</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Yellow.jpg" alt="Pokemon Yellow">
+            <div class="overlay">Pokemon Yellow</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Gold.jpg" alt="Pokemon Gold">
+            <div class="overlay">Pokemon Gold</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Silver.jpg" alt="Pokemon Silver">
+            <div class="overlay">Pokemon Silver</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Crystal.jpg" alt="Pokemon Crystal">
+            <div class="overlay">Pokemon Crystal</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Ruby.jpg" alt="Pokemon Ruby">
+            <div class="overlay">Pokemon Ruby</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Sapphire.jpg" alt="Pokemon Sapphire">
+            <div class="overlay">Pokemon Sapphire</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon FireRed.jpg" alt="Pokemon FireRed">
+            <div class="overlay">Pokemon FireRed</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon LeafGreen.jpg" alt="Pokemon LeafGreen">
+            <div class="overlay">Pokemon LeafGreen</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Emerald.jpg" alt="Pokemon Emerald">
+            <div class="overlay">Pokemon Emerald</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Diamond-and-Pearl.jpg" alt="Pokemon Diamond And Pearl">
+            <div class="overlay">Pokemon Diamond And Pearl</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Platinum.jpg" alt="Pokemon Platinum">
+            <div class="overlay">Pokemon Platinum</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon HeartGold-and-SoulSilver.jpg" alt="Pokemon HeartGold and SoulSilver">
+            <div class="overlay">Pokemon HeartGold and SoulSilver</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Black-and-White.jpg" alt="Pokemon Black and White">
+            <div class="overlay">Pokemon Black and White</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Black2.jpg" alt="Pokemon Black 2">
+            <div class="overlay">Pokemon Black 2</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon White2.jpg" alt="Pokemon White 2">
+            <div class="overlay">Pokemon White 2</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon X-Y.jpg" alt="Pokemon X and Y">
+            <div class="overlay">Pokemon X and Y</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon OmegaRuby-Alpha Sapphire.jpg" alt="Pokemon Omega Ruby and Alpha Sapphire">
+            <div class="overlay">Pokemon Omega Ruby and Alpha Sapphire</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Sun-Moon.jpg" alt="Pokemon Sun and Moon">
+            <div class="overlay">Pokemon Sun and Moon</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Ultra Sun-Moon.jpg" alt="Pokemon Ultra Sun and Moon">
+            <div class="overlay">Pokemon Ultra Sun and Ultra Moon</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Lets Go Pikachu-Eevee.jpg" alt="Pokemon Lets Go Pikachu and Eevee">
+            <div class="overlay">Pokemon Let's Go Pikachu and Eevee</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Sword-Shield.jpg" alt="Pokemon Sword and Shield">
+            <div class="overlay">Pokemon Sword and Shield</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Brilliant Diamond.jpg" alt="Pokemon Brilliant Diamond">
+            <div class="overlay">Pokemon Brilliant Diamond</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Shining Pearl.jpg" alt="Pokemon Shining Pearl">
+            <div class="overlay">Pokemon Shining Pearl</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Legends Arceus.jpg" alt="Pokemon Legends Arceus">
+            <div class="overlay">Pokemon Legends Arceus</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Scarlet.jpg" alt="Pokemon Scarlet">
+            <div class="overlay">Pokemon Scarlet</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgJogosPkm/Pokemon Violet.jpg" alt="Pokemon Violet">
+            <div class="overlay">Pokemon Violet</div>
+        </div>
+      </div>
+</body>
+</html>

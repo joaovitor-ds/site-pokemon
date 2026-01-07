@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Cartas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: rgb(255, 255, 255);
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            width: 100%;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 63.6px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        h3 {
+            text-align: left;
+        }
+
+        a:hover {
+            background-color: black;
+            color: cyan;
+        }
+
+        .btn {
+            padding: 10px 8px;
+            width: 100%;
+            background-color: red;
+            border: 1px solid;
+            border-radius: 5px;
+            text-align: center;
+
+        }
+
+        .btn:hover {
+            background-color: blue;
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px#4a009e,
+            inset 0px 0px 10px 2px;
+
+            transform: scale(1.05);
+        }
+
+        .display {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav style="width: 100%; z-index: 9999;">
+        <ul style="width: 100%; display: flex; justify-content: center;">
+            <li><a class="w3-opacity w3-hover-opacity-off" href="Projeto.html"><i class="fa fa-home"></i><br>Inicio</a>
+            </li>
+            <li><a class="w3-opacity w3-hover-opacity-off" href="Pokedex.html"><i
+                        class="fa fa-list-ol"></i><br>Pokedex</a>
+            </li>
+            <li><a class="w3-opacity w3-hover-opacity-off" href="Anime.html"><i class="fa fa-book"></i><br>Anime</a>
+            </li>
+            <li><a class="w3-opacity w3-hover-opacity-off" href="Filmes.html"><i class="fa fa-image"></i><br>Filmes</a>
+            </li>
+            <li><a class="w3-opacity w3-hover-opacity-off" href="Jogos.html"><i class="fa fa-gamepad"></i><br>Jogos</a>
+            </li>
+            <li><a class="w3-opacity w3-hover-opacity-off" href="Acessorios.html"><i
+                        class="fa fa-home"></i><br>Acessorios</a></li>
+            <li><a class="w3-opacity w3-hover-opacity-off" href="Cartas.html"><i class="fa fa-clone"></i><br>Cartas</a>
+            </li>
+            <li><a class="w3-opacity w3-hover-opacity-off" href="Aplicativos.html"><i
+                        class="fa fa-android"></i><br>Aplicativos</a></li>
+            <li><a class="w3-opacity w3-hover-opacity-off" href="Outros.html"><i class="fa fa-gear"></i><br>Outros</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="w3-row-padding">
+        <h1 style="text-align: center;">Coleções</h1>
+        <div class="w3-third" style="display: flex; justify-content: center; flex-direction: column;">
+            <div style="width: 100%;">
+                <button onclick="alaka()" class="btn">
+                    Base Set 2
+                </button>
+            </div>
+            <div id="alaka" class="display">
+                <div class="w3-half">
+                    <button onclick='fecharalaka()' style='position:absolute;z-index:5;'>X</button>
+                    <img src='ImgCartasPkm/BaseSet2/Alakazam.png' id='fechar'>
+                </div>
+            </div>
+        </div>
+        <div class="w3-third">
+            <button onclick="aggron()" class="btn">
+                Ex Rubi & Safira
+            </button>
+            <div id="aggron" class="display">
+                <button onclick='fecharaggron()' style='position:absolute;z-index:5;'>X</button>
+                <img src='ImgCartasPkm/Ex Rubi & Safira/Aggron.png' id='fechar'>
+            </div>
+        </div>
+        <div class="w3-third">
+
+            <button onclick="groudon()" class="btn">
+
+                Ex Esmeralda
+            </button>
+            <div id="groudon" class="display">
+                <button onclick='fechargroudon()' style='position:absolute;z-index:5;'>X</button>
+                <img src='ImgCartasPkm/EX Esmeralda/Groudon.png' id='fechar'>
+            </div>
+        </div>
+        <div class="w3-third">
+
+            <button onclick="krokorok()" class="btn">
+
+                Black & White
+            </button>
+            <div id="krokorok" class="display">
+                <button onclick='fecharkrokorok()' style='position:absolute;z-index:5;'>X</button>
+                <img src='ImgCartasPkm/Black & White/Krokorok.png' id='fechar'>
+            </div>
+        </div>
+        <div class="w3-third">
+
+            <button onclick="dce()" class="btn">
+
+                X & Y
+            </button>
+            <div id="dce" class="display">
+                <button onclick='fechardce()' style='position:absolute;z-index:5;'>X</button>
+                <img src='ImgCartasPkm/XY/Double Colorless Energy.png' id='fechar'>
+            </div>
+        </div>
+        <div class="w3-third">
+
+            <button onclick="inci()" class="btn">
+
+                Sol & Lua
+            </button>
+            <div id="inci" class="display">
+                <button onclick='fecharinci()' style='position:absolute;z-index:5;'>X</button>
+                <img src='ImgCartasPkm/Sol e Lua/Incineroar.png' id='fechar'>
+            </div>
+        </div>
+        <div class="w3-third">
+
+            <button onclick="dc()" class="btn">
+
+                Sintonia Mental
+            </button>
+            <div id="dc" class="display">
+                <button onclick='fechardc()' style='position:absolute;z-index:5;'>X</button>
+                <img src='ImgCartasPkm/Sintonia Mental/Dark City.png' id='fechar'>
+            </div>
+        </div>
+        <div class="w3-third">
+
+            <button onclick="char()" class="btn">
+
+                Eclipse Cósmico
+            </button>
+            <div id="char" class="display">
+                <button onclick='fecharchar()' style='position:absolute;z-index:5;'>X</button>
+                <img src='ImgCartasPkm/Eclipse Cósmico/Charizard&Braixen-GX.png' id='fechar'>
+            </div>
+        </div>
+        <div class="w3-third">
+
+            <button onclick="gb()" class="btn">
+
+                Espada & Escudo
+            </button>
+            <div id="gb" class="display">
+                <button onclick='fechargb()' style='position:absolute;z-index:5;'>X</button>
+                <img src='ImgCartasPkm/Espada e Escudo/Great Ball.png' id='fechar'>
+            </div>
+        </div>
+        <div class="w3-third">
+
+            <button onclick="togvm()" class="btn">
+
+                Voltagem Vivida
+            </button>
+            <div id="togvm" class="display">
+                <button onclick='fechartogvm()' style='position:absolute;z-index:5;'>X</button>
+                <img src='ImgCartasPkm/Voltagem Vivida/Togekiss-VMAX.png' id='fechar'>
+            </div>
+        </div>
+        <div class="w3-third">
+
+            <button onclick="ckv()" class="btn">
+
+                Battle Sytles
+            </button>
+            <div id="ckv" class="display">
+                <button onclick='fecharckv()' style='position:absolute;z-index:5;'>X</button>
+                <img src='ImgCartasPkm/Battle Styles/Corviknight-V.png' id='fechar'>
+            </div>
+        </div>
+        <div class="w3-third">
+
+            <button onclick="gmv()" class="btn">
+
+                Reinado Arrepiante
+            </button>
+            <div id="gmv" class="display">
+                <button onclick='fechargmv()' style='position:absolute;z-index:5;'>X</button>
+                <img src='ImgCartasPkm/Reinado Arrepiante/Galrian Moltres-V.png' id='fechar'>
+            </div>
+        </div>
+    </div>
+    <script>
+        function alaka() {
+            const fechar = document.getElementById('alaka');
+            fechar.classList.remove('display');
+        }
+
+        function fecharalaka() {
+            const fechamento = document.getElementById('alaka');
+            fechamento.classList.add('display');
+        }
+        function aggron() {
+            const fechar = document.getElementById('aggron');
+            fechar.classList.remove('display');
+        }
+
+        function fecharaggron() {
+            const fechamento = document.getElementById('aggron');
+            fechamento.classList.add('display');
+        }
+        function groudon() {
+            const fechar = document.getElementById('groudon');
+            fechar.classList.remove('display');
+        }
+
+        function fechargroudon() {
+            const fechamento = document.getElementById('groudon');
+            fechamento.classList.add('display');
+        }
+        function krokorok() {
+            const fechar = document.getElementById('krokorok');
+            fechar.classList.remove('display');
+        }
+
+        function fecharkrokorok() {
+            const fechamento = document.getElementById('krokorok');
+            fechamento.classList.add('display');
+        }
+        function dce() {
+            const fechar = document.getElementById('dce');
+            fechar.classList.remove('display');
+        }
+
+        function fechardce() {
+            const fechamento = document.getElementById('dce');
+            fechamento.classList.add('display');
+        }
+        function inci() {
+            const fechar = document.getElementById('inci');
+            fechar.classList.remove('display');
+        }
+
+        function fecharinci() {
+            const fechamento = document.getElementById('inci');
+            fechamento.classList.add('display');
+        }
+        function dc() {
+            const fechar = document.getElementById('dc');
+            fechar.classList.remove('display');
+        }
+
+        function fechardc() {
+            const fechamento = document.getElementById('dc');
+            fechamento.classList.add('display');
+        }
+        function char() {
+            const fechar = document.getElementById('char');
+            fechar.classList.remove('display');
+        }
+
+        function fecharchar() {
+            const fechamento = document.getElementById('char');
+            fechamento.classList.add('display');
+        }
+        function gb() {
+            const fechar = document.getElementById('gb');
+            fechar.classList.remove('display');
+        }
+
+        function fechargb() {
+            const fechamento = document.getElementById('gb');
+            fechamento.classList.add('display');
+        }
+        function togvm() {
+            const fechar = document.getElementById('togvm');
+            fechar.classList.remove('display');
+        }
+
+        function fechartogvm() {
+            const fechamento = document.getElementById('togvm');
+            fechamento.classList.add('display');
+        }
+        function ckv() {
+            const fechar = document.getElementById('ckv');
+            fechar.classList.remove('display');
+        }
+
+        function fecharckv() {
+            const fechamento = document.getElementById('ckv');
+            fechamento.classList.add('display');
+        }
+        function gmv() {
+            const fechar = document.getElementById('gmv');
+            fechar.classList.remove('display');
+        }
+
+        function fechargmv() {
+            const fechamento = document.getElementById('gmv');
+            fechamento.classList.add('display');
+        }
+    </script>
+</body>
+
+</html>

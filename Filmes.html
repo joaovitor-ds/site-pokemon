@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Filmes</title>
+    <style>
+        body {
+          margin: 0;
+          background-color: white
+        }
+    
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+          width: 100%;
+        }
+    
+        li {
+          float: left;
+        }
+    
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 60.1px;
+          text-decoration: none;
+        }
+    
+        li a:hover:not(.active) {
+          background-color: #111;
+        }
+    
+        h3 {
+          text-align: left;
+        }
+        a:hover {
+          background-color: black;
+          color: cyan;
+        }
+        .tamanho {
+            position: relative;
+            width: 45%;
+            margin: 0 auto; /* Adicionado margem para espaçamento */
+            text-align: center;
+        }
+
+        .tamanho img {
+            width: 50%;
+            height: auto;
+            border: 1px solid white;
+            margin: 10px;
+            border-radius: 5px; /* Adicionado borda arredondada */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 9%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid white;
+            border-radius: 5px;
+            width: 40%;
+        }
+        .overlay:hover{
+            background-color: rgb(212, 0, 255);
+            transition: 1s;
+            box-shadow: 0px 0px 10px 8px rgb(0, 0, 0),
+            inset 0px 0px 10px 2px;
+            color: black;
+        }
+      </style>
+</head>
+<body>
+  <nav style="width: 100%; z-index: 9999">
+    <ul style="width: 100%; display: flex; justify-content: center;">
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Projeto.html"><i class="fa fa-home"></i><br>Inicio</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Pokedex.html"><i class="fa fa-list-ol"></i><br>Pokedex</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Anime.html"><i class="fa fa-book"></i><br>Anime</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Filmes.html"><i class="fa fa-image"></i><br>Filmes</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Jogos.html"><i class="fa fa-gamepad"></i><br>Jogos</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Acessorios.html"><i class="fa fa-home"></i><br>Acessorios</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Cartas.html"><i class="fa fa-clone"></i><br>Cartas</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Aplicativos.html"><i class="fa fa-android"></i><br>Aplicativos</a></li>
+        <li><a class="w3-opacity w3-hover-opacity-off" href="Outros.html"><i class="fa fa-gear"></i><br>Outros</a></li>
+      </ul>
+    </nav>
+      <div class="w3-row-padding">
+        <div class="w3-half tamanho">
+            <img src="ImgFilmesPkm/Pokemon The First Movie.jpg" alt="Pokemon The First Movie">
+            <div class="overlay">Pokemon The First Movie</div>
+        </div>
+        <div class="w3-half tamanho">
+            <img src="ImgFilmesPkm/Pokemon The Movie 2000.jpg" alt="Pokemon The Movie">
+            <div class="overlay">Pokemon The Movie(2000)</div>
+        </div>
+        <div class="w3-half tamanho">
+          <img src="ImgFilmesPkm/Pikachu Ao Resgate.jpg" alt="Pikachu ao Resgate">
+          <div class="overlay">Pikachu Ao Resgate</div>
+      </div>
+      <div class="w3-half tamanho">
+          <img src="ImgFilmesPkm/Pokemon 3 Spell of the Unown.jpg" alt="Pokemon 3 Spell of the Unown">
+          <div class="overlay">Pokemon 3 Spell of the Unown</div>
+      </div>
+      <div class="w3-half tamanho">
+        <img src="ImgFilmesPkm/Pokemon 4Ever.jpg" alt="Pokemon 4Ever">
+        <div class="overlay">Pokemon 4Ever</div>
+    </div>
+    <div class="w3-half tamanho">
+        <img src="ImgFilmesPkm/Pokemon Heroes.jpg" alt="Pokemon Heroes">
+        <div class="overlay">Pokemon Heroes</div>
+    </div>
+    <div class="w3-half tamanho">
+      <img src="ImgFilmesPkm/Pokemon Jirachi Wish Maker.jpg" alt="Pokemon Jirachi Wish Maker">
+      <div class="overlay">Pokemon Jirachi Wish Maker</div>
+      </div>
+      <div class="w3-half tamanho">
+        <img src="ImgFilmesPkm/Pokemon Destiny Deoxys.jpg" alt="Pokemon Destiny Deoxys">
+        <div class="overlay">Pokemon Destiny Deoxys</div>
+      </div>
+      <div class="w3-half tamanho">
+        <img src="ImgFilmesPkm/Pokemon Lucario and the Mystery of Mew.jpg" alt="Pokemon Lucario and the Mystery of Mew">
+        <div class="overlay">Pokemon Lucario e o Misterio de Mew</div>
+      </div>
+      <div class="w3-half tamanho">
+        <img src="ImgFilmesPkm/Pokemon Ranger e o Lendario Templo do Mar.jpg" alt="Pokemon Ranger e o Lendario Templo do Mar">
+        <div class="overlay">Pokemon Ranger e o Lendario Templo do Mar</div>
+      </div>
+      <div class="w3-half tamanho">
+        <img src="ImgFilmesPkm/Pokemon O Pesadelo de Darkrai.jpg" alt="Pokemon">
+        <div class="overlay">Pokemon: O Pesadelo de Darkrai</div>
+      </div>
+      <div class="w3-half tamanho">
+        <img src="ImgFilmesPkm/Pokemon Zoroark Mestre Das Ilusões.jpg" alt="Pokemon Zoroark Mestre Das Ilusões">
+        <div class="overlay">Pokemon Zoroark Mestre Das Ilusões</div>
+      </div>
+      <div class="w3-half tamanho">
+        <img src="ImgFilmesPkm/Pokémon O Filme Branco Victini E Zekrom.jpg" alt="Pokemon O Filme Branco Victini E Zekrom">
+        <div class="overlay">Pokemon O Filme Branco Victini E Zekrom</div>
+      </div>
+      <div class="w3-half tamanho">
+        <img src="ImgFilmesPkm/Pokémon O Filme Kyurem Contra a Espada da Justiça.jpg" alt="Pokemon O Filme Kyurem Contra a Espada da Justiça">
+        <div class="overlay">Pokemon O Filme Kyurem Contra a Espada da Justiça</div>
+      </div>
+      <div class="w3-half tamanho">
+        <img src="ImgFilmesPkm/Pokémon O Filme Genesect e a Lenda Revelada.jpg" alt="Pokemon O Filme Genesect e a Lenda Revelada">
+        <div class="overlay">Pokemon O Filme Genesect e a Lenda Revelada</div>
+      </div>
+      <div class="w3-half tamanho">
+        <img src="ImgFilmesPkm/Pokémon O Filme Diancie e o Casulo da Destruição.jpg" alt="Pokemon O Filme Diancie e o Casulo da Destruição">
+        <div class="overlay">Pokemon O Filme Diancie e o Casulo da Destruição</div>
+      </div>
+      <div class="w3-half tamanho">
+        <img src="ImgFilmesPkm/Pokémon O Filme Hoopa e o Duelo Lendário.jpg" alt="Pokemon O Filme Hoopa e o Duelo Lendário">
+        <div class="overlay">Pokemon O Filme Hoopa e o Duelo Lendário</div>
+      </div>
+      <div class="w3-half tamanho">
+        <img src="ImgFilmesPkm/Pokémon O Filme Volcanion e a Engenhosa Magearna.jpg" alt="Pokemon O Filme Volcanion e a Engenhosa Magearna">
+        <div class="overlay">Pokemon O Filme Volcanion e a Engenhosa Magearna</div>
+      </div>
+      <div class="w3-half tamanho">
+        <img src="ImgFilmesPkm/Pokémon O Filme 20 Eu Escolho Você.jpg" alt="Pokemon O Filme 20 Eu Escolho Você">
+        <div class="overlay">Pokemon O Filme 20 Eu Escolho Você</div>
+      </div>
+      <div class="w3-half tamanho">
+        <img src="ImgFilmesPkm/Pokemon The Movie The Power Of Us.jpg" alt="Pokemon The Movie The Power Of Us">
+        <div class="overlay">Pokemon The Movie The Power Of Us</div>
+      </div>
+      <div class="w3-half tamanho">
+        <img src="ImgFilmesPkm/Pokémon Mewtwo Strikes Back  Evolution.jpg" alt="Pokemon Mewtwo Strikes Back  Evolution">
+        <div class="overlay">Pokemon Mewtwo Strikes Back  Evolution</div>
+      </div>
+      <div class="w3-half tamanho">
+        <img src="ImgFilmesPkm/Pokémon The Movie Secrets of the Jungle.jpg" alt="Pokemon The Movie Secrets of the Jungle">
+        <div class="overlay">Pokemon The Movie Secrets of the Jungle</div>
+      </div>
+    </div>
+</body>
+</html>
